@@ -10,7 +10,7 @@ function solution(my_string, alp) {
   return result.join("");
 }
 
-// answer01(for활용)
+// answer02(for활용)
 function solution(my_string, alp) {
   let result = "";
   for (let i = 0; i < my_string.length; i++) {
@@ -23,7 +23,7 @@ function solution(my_string, alp) {
   return result;
 }
 
-// answer01(정규표현식 reduce 활용)
+// answer03(정규표현식 reduce 활용)
 function solution(my_string, alp) {
   return my_string.replace(new RegExp(alp, "ig"), alp.toUpperCase());
 }
