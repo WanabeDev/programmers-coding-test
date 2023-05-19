@@ -1,7 +1,7 @@
 // My Answer 01
 function solution(arr, queries) {
   for (const [s, e, k] of queries) {
-    for (let i = s; i < e; i++) {
+    for (let i = s; i <= e; i++) {
       if (i % k === 0) {
         arr[i] += 1;
       }
