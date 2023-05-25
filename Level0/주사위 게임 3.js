@@ -17,7 +17,7 @@ function solution(a, b, c, d) {
   //네 수가 같을 때
   if (dupCount === 4) {
     return 1111 * dices[0];
-    //세 수가 같을 때 (dices[0]를 활용하면 [4,1,1,1]와 같이 rest값이 맨 앞에오는 경우를 대처하지 못함)
+    //세 수가 같을 때 (📌dices[0]를 활용하면 [4,1,1,1]와 같이 rest값이 맨 앞에오는 경우를 대처하지 못함)
   } else if (dupCount === 3) {
     return Math.pow(10 * dices[0] + rest[0], 2);
     //두 수가 같을 때
@@ -113,19 +113,22 @@ function solution(a, b, c, d) {
 */
 /* Another Approach 01(map 자료구조 활용) */
 function count(arr) {
+  //숫자의 등장 횟수를 저장하는 Map 객체
   const counter = new Map();
   for (const num of arr) {
     counter.set(num, (counter.get(num) || 0) + 1);
   }
+  //등장 횟수에 따라 정렬된 숫자 배열
   const sortedByCnt = [...counter.keys()].sort(
     (a, b) => counter.get(b) - counter.get(a)
   );
+  //가장 많이 등장하는 숫자
   const maxCnt = Math.max(...counter.values());
   return [sortedByCnt, maxCnt];
 }
 
 function solution(a, b, c, d) {
-  const [arr, maxCnt] = count([a, b, c, d]);
+  const [arr, maxCnt] = count([a, b, c, d]); //arr:중복을 필터링한 나머지 maxCnt:중복되는 수
   const [p, q, r, s] = arr;
   if (arr.length === 1) {
     return p * 1111;
