@@ -11,7 +11,6 @@ function solution(rank, attendance) {
 
 
 
-
 */
 /* My Answer 02 */
 function solution(rank, att) {
@@ -23,7 +22,6 @@ function solution(rank, att) {
   return 10000 * top3[0][1] + 100 * top3[1][1] + top3[2][1];
 }
 /*
-
 
 
 
@@ -44,7 +42,6 @@ function solution(rank, attendance) {
     .reduce((acc, cur, idx) => acc + cur[0] * 100 ** (2 - idx), 0);
 }
 /*
-
 
 
 
