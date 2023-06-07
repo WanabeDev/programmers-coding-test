@@ -13,3 +13,15 @@ function solution(n) {
 function solution(n, x = 0) {
   return n % x === 1 ? x : solution(n, x + 1);
 }
+/* 
+
+
+*/
+/* Another Approach 02(for를 활용한 방법) */
+const solution = function (n) {
+  for (let i = 0; i < n; i++) {
+    if (n % i == 1) {
+      return i;
+    }
+  }
+};
