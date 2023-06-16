@@ -46,8 +46,8 @@ function solution(participant, completion) {
     let a = participant[i],
       b = completion[i];
 
-    map.set(a, (map.get(a) || 0) + 1);
-    map.set(b, (map.get(b) || 0) - 1);
+    map.set(a, (map.get(a) || 0) + 1); //map에 a가 있으면 +1, 없으면 0을 초기값으로
+    map.set(b, (map.get(b) || 0) - 1); //map에 b가 있으면 -1, 없으면 0을 초기값으로
   }
 
   // 출연회수가 0보다 큰 참가자를 찾아 반환

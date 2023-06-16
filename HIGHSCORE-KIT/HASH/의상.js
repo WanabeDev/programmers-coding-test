@@ -29,9 +29,9 @@ function solution(clothes) {
 function solution(clothes) {
   let answer = 1;
   const obj = {};
-  for (let arr of clothes) {
+  for (let item of clothes) {
     // 카테고리만 키로 추가하고 값은 숫자로도 충분
-    obj[arr[1]] = (obj[arr[1]] || 0) + 1;
+    obj[item[1]] = (obj[item[1]] || 0) + 1;
   }
 
   for (let key in obj) {
