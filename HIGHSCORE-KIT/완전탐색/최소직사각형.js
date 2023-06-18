@@ -28,3 +28,29 @@ function solution(sizes) {
   );
   return hor * ver;
 }
+
+/* 
+let [h, v] = [0, 0]; // 초기값
+
+// 첫 번째 요소
+let [a, b] = [60, 50];
+h = Math.max(h, Math.max(a, b)); // h = Math.max(0, 60) = 60
+v = Math.max(v, Math.min(a, b)); // v = Math.max(0, 50) = 50
+
+// 두 번째 요소
+[a, b] = [30, 70];
+h = Math.max(h, Math.max(a, b)); // h = Math.max(60, 70) = 70
+v = Math.max(v, Math.min(a, b)); // v = Math.max(50, 30) = 50
+
+// 세 번째 요소
+[a, b] = [60, 30];
+h = Math.max(h, Math.max(a, b)); // h = Math.max(70, 60) = 70
+v = Math.max(v, Math.min(a, b)); // v = Math.max(50, 30) = 50
+
+// 네 번째 요소
+[a, b] = [80, 40];
+h = Math.max(h, Math.max(a, b)); // h = Math.max(70, 80) = 80
+v = Math.max(v, Math.min(a, b)); // v = Math.max(50, 40) = 50
+
+console.log(h, v); // 출력: 80 50
+ */
