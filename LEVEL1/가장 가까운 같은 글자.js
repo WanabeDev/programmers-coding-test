@@ -19,7 +19,7 @@ function solution(s) {
 
 
 */
-/* My Answer 01(hash를 활용한 풀이) */
+/* ✨ My Answer 01 ✨ (hash를 활용한 풀이) */
 function solution(s) {
   // -1로 이루어진 s길이의 배열 생성
   const result = new Array(s.length).fill(-1);
@@ -41,7 +41,7 @@ function solution(s) {
 
 
 */
-/* Another Approach 01(위 풀이에서 for대신 map을 사용한 방법) */
+/* ⭐️ Another Approach 01 ⭐️ (위 풀이에서 for대신 map을 사용한 방법) */
 function solution(s) {
   const hash = {};
 
@@ -56,7 +56,7 @@ function solution(s) {
 
 
 */
-/* Another Approach 02(lastIndexOf를 이용하여 중복문자와의 거리를 계산) */
+/* ⭐️ Another Approach 02 ⭐️ (lastIndexOf를 이용하여 중복문자와의 거리를 계산) */
 const solution = (s) =>
   [...s].map((char, i) => {
     // lastIndexOf가 해당값이 없으면 -1을 반환한다는 점을 이용
