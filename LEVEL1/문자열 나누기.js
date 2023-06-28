@@ -69,7 +69,7 @@ function solution(s, count = 0) {
 
 
 */
-/* ⭐️ Another Approach 02 ⭐️ */
+/* ⭐️ Another Approach 02 ⭐️ (재귀 함수를 활용한 풀이) */
 function solution(s) {
   let answer = 0; // 분해한 문자열의 개수
   let current; // 현재 처리 중인 문자
