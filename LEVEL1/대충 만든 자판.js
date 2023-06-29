@@ -1,4 +1,4 @@
-/* 🌧️ My Answer 01 🌧️ (너무 복잡하게 풀어낸 방법)*/
+/* 🌧️ My Answer 01 🌧️ (Map을 활용한 방법으로 너무 복잡하게 풀어내 아쉬운 풀이)*/
 function solution(keymap, targets) {
   const map = new Map();
   const result = [];
@@ -45,7 +45,7 @@ function solution(keymap, targets) {
 
 
 */
-/* ⭐️ Another Approach 01 ⭐️ */
+/* ⭐️ Another Approach 01 ⭐️ (객체 리터럴을 활용한 방법)*/
 function solution(keymap, targets) {
   const answer = [];
   const map = {};
