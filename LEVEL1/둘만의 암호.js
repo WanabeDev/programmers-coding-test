@@ -29,7 +29,7 @@ function solution(s, skip, index) {
 
 
 */
-/* ✨ My Answer 01 ✨(map을 활용한 풀이) */
+/* ✨ My Answer 01 ✨ */
 function solution(s, skip, index) {
   let result = "";
 
