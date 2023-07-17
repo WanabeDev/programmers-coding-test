@@ -1,3 +1,55 @@
+/* 🌧️ My Answer 01 🌧️ (가독성 효율 아쉬운 코드) */
+function solution(id_list, report, k) {
+  report = Array.from(new Set(report));
+  let result = Array(id_list.length).fill(0);
+
+  // 회원 목록 맵 세팅
+  const idMap = new Map();
+  for (let i = 0; i < id_list.length; i++) {
+    idMap.set(id_list[i], []);
+  }
+
+  // idMap에 회원별 신고자 등록
+  for (const entry of report) {
+    const [key, value] = entry.split(" ");
+    if (idMap.has(key)) {
+      idMap.get(key).push(value);
+    }
+  }
+
+  // 인물 별 신고회수 기록
+  const reportMap = new Map();
+  for (const values of idMap.values()) {
+    for (const value of values) {
+      const count = reportMap.get(value) || 0;
+      reportMap.set(value, count + 1);
+    }
+  }
+
+  // k번 이상 신고된 인물 배열로 반환
+  const reported = [];
+  for (const [key, value] of reportMap.entries()) {
+    if (value >= k) {
+      reported.push(key);
+    }
+  }
+
+  if (reported.length < 1) {
+    return result;
+  } else {
+    idMap.forEach((values, key) => {
+      const filteredVal = values.filter((value) => reported.includes(value));
+      idMap.set(key, filteredVal);
+    });
+
+    return Array.from(idMap.values(), (arr) => arr.length);
+  }
+}
+/* 
+
+
+
+*/
 /* ✨ My Answer 01 ✨ */
 function solution(id_list, report, k) {
   const uniqueReport = Array.from(new Set(report)); // 중복 제거된 신고 목록
